@@ -1,9 +1,10 @@
 package GB.ToysRaffleStore.Toys;
 
-public class Toy {
+public class Toy implements Comparable<Toy>{
     private long toyId;
     private String name;
-    private int frequency;
+    private Integer frequency;
+    private  Integer count = 0;
 
     public Toy(long toyId, String name, int frequency){
         this.toyId = toyId;
@@ -22,17 +23,37 @@ public class Toy {
         return frequency;
     }
 
-    @Override
-    public String toString() {
-        return "Toy{" +
-                "toyId=" + toyId +
-                ", name='" + name + '\'' +
-                ", frequency=" + frequency +
-                '}';
+    public void setToyId(long toyId) {
+        this.toyId = toyId;
     }
 
-//    @Override
-//    public int compareTo(Toy o) {
-//        return this.frequency.compareTo(o.frequency);
-//    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount() {
+        this.count += 1;
+    }
+
+    @Override
+    public String toString() {
+        return "Игрушка " +
+                "с Id: " + toyId +
+                " " + '"' + name + '"' +
+                " c шансом выпадения " + frequency +
+                "0% выпала " + count + "раз";
+    }
+
+    @Override
+    public int compareTo(Toy o) {
+        return this.frequency.compareTo(o.frequency);
+    }
 }
