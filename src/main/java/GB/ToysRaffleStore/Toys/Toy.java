@@ -1,7 +1,7 @@
 package GB.ToysRaffleStore.Toys;
 
 public class Toy implements Comparable<Toy>{
-    private long toyId;
+    private Long toyId;
     private String name;
     private Integer frequency;
     private  Integer count = 0;
@@ -54,6 +54,6 @@ public class Toy implements Comparable<Toy>{
 
     @Override
     public int compareTo(Toy o) {
-        return this.frequency.compareTo(o.frequency);
+        return this.toyId.compareTo(o.toyId);
     }
 }

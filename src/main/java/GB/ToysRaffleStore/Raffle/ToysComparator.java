@@ -4,10 +4,12 @@ import GB.ToysRaffleStore.Toys.Toy;
 
 import java.util.Comparator;
 
-public class ToysComparator implements Comparator<Toy> {
+public class ToysComparator<T extends Toy> implements Comparator<T> {
     @Override
-    public int compare(Toy o1, Toy o2) {
-
-        return (int) (o1.getFrequency() - o2.getFrequency());
+    public int compare(T o1, T o2) {
+        if (o1.getToyId() < o2.getToyId()){
+            return 1;
+        }
+        else return -1;
     }
 }

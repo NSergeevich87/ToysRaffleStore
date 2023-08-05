@@ -1,5 +1,6 @@
 package GB.ToysRaffleStore;
 
+import GB.ToysRaffleStore.Raffle.ToysComparator;
 import GB.ToysRaffleStore.Service.ServiceToys;
 import GB.ToysRaffleStore.Toys.Toy;
 
@@ -30,5 +31,10 @@ public class Main {
             System.out.println(q + " из " + trys + " попыток.");
         }
         System.out.println("\nВсе данные записаны в файл!");
+
+        //Сортировка по УБЫВАНИЮ Id
+        System.out.println();
+        System.out.println("Сортировка по убыванию Id");
+        toys.printToys(toys.getSortedByToysId());
     }
 }
