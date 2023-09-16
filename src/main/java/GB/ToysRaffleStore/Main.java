@@ -19,7 +19,7 @@ public class Main {
 
         ServiceToys toys = new ServiceToys();
         toys.create(5968, "Oso", 2);
-        toys.create(4622, "Conejo", 4);
+        toys.create(4622, "Conejo", 2);
         toys.create(7835, "Agila", 6);
         toys.create(7777, "MunecaDeSuerte", 10);
 
